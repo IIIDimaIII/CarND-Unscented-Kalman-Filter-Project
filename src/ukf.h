@@ -67,6 +67,17 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
+  //MY CODE FOR NIS TRACKING 
+  float nis_up_lim_rad_;
+  float nis_up_lim_lid_;
+  //number of times nis is above upper boundry
+  int num_above_lim_radar_;
+  int num_above_lim_lidar_;
+  int num_obs_rad_;
+  int num_obs_lid_;
+
+  //END OF MY CODE
+
 
   /**
    * Constructor
