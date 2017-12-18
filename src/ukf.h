@@ -67,6 +67,9 @@ public:
   ///* Sigma point spreading parameter
   double lambda_;
 
+  MatrixXd R_lidar_;
+  MatrixXd R_radar_;
+
   //MY CODE FOR NIS TRACKING 
   float nis_up_lim_rad_;
   float nis_up_lim_lid_;
@@ -113,6 +116,9 @@ public:
    * @param meas_package The measurement at k+1
    */
   void UpdateRadar(MeasurementPackage meas_package);
+
+  void NormalizeAngle(double& phi);
+  
 };
 
 #endif /* UKF_H */
